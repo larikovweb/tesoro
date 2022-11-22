@@ -1,3 +1,6 @@
-include ../../../src/blocks/components/picture/picture
-include ../../../src/blocks/components/btn/btn
-include ../../../src/blocks/components/input/input
+//- first imgae for img, last for first source(webp)
+mixin picture(path, type, about="image")
+    picture 
+        each val in type.reverse() 
+            source(srcset=path+ "."+val, type="image/" + val)
+        img(src=path+ "." +type[0], alt=about)

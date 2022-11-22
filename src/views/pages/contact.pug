@@ -1,0 +1,14 @@
+extends ../layouts/default
+
+block variables
+	- const title = "Контакты";
+
+block content
+	include ../../blocks/modules/header/header
+	main 
+		include ../../blocks/modules/contacts/contacts
+		include ../../blocks/modules/cart/cart
+	include ../../blocks/modules/footer/footer
+
+block scripts
+	script(src="js/main.js")
