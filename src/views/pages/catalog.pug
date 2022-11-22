@@ -1,0 +1,15 @@
+extends ../layouts/default
+
+block variables
+	- const title = "Каталог";
+
+block content
+	include ../../blocks/modules/header/header
+	main 
+		include ../../blocks/modules/catalog/catalog
+		include ../../blocks/modules/modal-application/modal-application
+		include ../../blocks/modules/cart/cart
+	include ../../blocks/modules/footer/footer
+
+block scripts
+	script(src="js/main.js")

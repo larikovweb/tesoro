@@ -10,6 +10,9 @@
 @import "base/fonts";
 @import "base/general";
 
+@import "./components/btn";
+@import "./components/input";
+
 // БЭМ-блоки
 @import "../blocks/modules/modules";
 
