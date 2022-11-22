@@ -23,32 +23,28 @@
     img {
       &:nth-child(1) {
         width: rem(760);
-        height: rem(134);
         margin-bottom: rem(58);
       }
       &:nth-child(2) {
         width: rem(351);
-        height: rem(57);
         margin-bottom: rem(20);
       }
     }
   }
   &__stars {
     width: rem(403);
-    height: rem(215);
     margin-bottom: rem(-61);
-    animation: loaderStars 2s;
+    animation: loaderStars 2.25s;
   }
   &__img {
     position: relative;
     width: rem(482);
     margin-bottom: rem(19);
-    animation: loaderCandles 2.25s;
+    animation: loaderCandles 2s;
     img {
       &:nth-child(1) {
         position: absolute;
         width: rem(38);
-        height: rem(104);
         left: rem(70);
         bottom: rem(225);
         animation: loaderFire 2.5s infinite;
@@ -58,14 +54,12 @@
         left: calc(50% - 0.625rem);
         bottom: rem(125);
         width: rem(20);
-        height: rem(54.4);
         z-index: 1;
         animation: loaderFire 1.6s infinite;
       }
       &:nth-child(3) {
         position: absolute;
         width: rem(19);
-        height: rem(51);
         right: rem(87);
         bottom: rem(242);
         animation: loaderFire 1.3s infinite;
@@ -74,6 +68,43 @@
         width: 100%;
         height: 100%;
       }
+    }
+  }
+  @media screen and (max-width: $lgPhoneWidth) {
+    justify-content: center;
+    &__title {
+      img {
+        &:nth-child(1) {
+          width: rem(352);
+        }
+        &:nth-child(2) {
+          width: rem(224);
+        }
+      }
+    }
+    &__img {
+      width: rem(352);
+      img {
+        &:nth-child(1) {
+          width: rem(21);
+          left: rem(55);
+          bottom: rem(168);
+        }
+        &:nth-child(2) {
+          width: rem(26);
+          left: calc(50% - 0.8125rem);
+          bottom: rem(96);
+        }
+        &:nth-child(3) {
+          width: rem(16);
+          right: rem(61);
+          bottom: rem(176);
+        }
+      }
+    }
+    &__stars {
+      margin-top: rem(120);
+      width: rem(352);
     }
   }
 }
@@ -114,12 +145,15 @@
 @keyframes loaderFire {
   0% {
     transform: scale(1);
+    filter: blur(1px);
   }
   50% {
     transform: scale(1.05) skew(-0.5deg);
+    filter: blur(0.5px);
   }
   100% {
     transform: scale(1);
+    filter: blur(1px);
   }
 }
 
