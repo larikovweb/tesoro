@@ -1,0 +1,153 @@
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  overflow: hidden;
+  min-height: 100vh;
+  background: #f4f7f8;
+  opacity: 0;
+  visibility: hidden;
+  animation: loader 5s;
+  &__title {
+    position: absolute;
+    top: rem(211);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: loaderTitleWrap 1.5s;
+    img {
+      &:nth-child(1) {
+        width: rem(760);
+        height: rem(134);
+        margin-bottom: rem(58);
+      }
+      &:nth-child(2) {
+        width: rem(351);
+        height: rem(57);
+        margin-bottom: rem(20);
+      }
+    }
+  }
+  &__stars {
+    width: rem(403);
+    height: rem(215);
+    margin-bottom: rem(-61);
+    animation: loaderStars 2s;
+  }
+  &__img {
+    position: relative;
+    width: rem(482);
+    margin-bottom: rem(19);
+    animation: loaderCandles 2.25s;
+    img {
+      &:nth-child(1) {
+        position: absolute;
+        width: rem(38);
+        height: rem(104);
+        left: rem(70);
+        bottom: rem(225);
+        animation: loaderFire 2.5s infinite;
+      }
+      &:nth-child(2) {
+        position: absolute;
+        left: calc(50% - 0.625rem);
+        bottom: rem(125);
+        width: rem(20);
+        height: rem(54.4);
+        z-index: 1;
+        animation: loaderFire 1.6s infinite;
+      }
+      &:nth-child(3) {
+        position: absolute;
+        width: rem(19);
+        height: rem(51);
+        right: rem(87);
+        bottom: rem(242);
+        animation: loaderFire 1.3s infinite;
+      }
+      &:nth-child(4) {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
+
+@keyframes loader {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+  70% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes loaderTitleWrap {
+  0% {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+  30% {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+  100% {
+    top: rem(211);
+    left: 50%;
+    transform: translate(-50%, 0) scale(1);
+  }
+}
+
+@keyframes loaderFire {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05) skew(-0.5deg);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes loaderCandles {
+  0% {
+    opacity: 0;
+    transform: translateY(100%) scale(0);
+  }
+  50% {
+    opacity: 0;
+    transform: translateY(100%) scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes loaderStars {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
