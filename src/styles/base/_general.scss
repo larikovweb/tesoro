@@ -3,31 +3,20 @@
 }
 
 html {
-  line-height: $mainLineHeight;
-  font-size: $mainFontSize;
   color: $mainFontColor;
   height: 100%;
   scroll-behavior: smooth;
+  font-size: calcFluidFontSize(5.40005, 18, 576, 1920);
 }
 
-@media screen and (max-width: $desktopWidth) {
+@media screen and (max-width: $phoneWidth) {
   html {
-    font-size: 15px;
-  }
-}
-
-@media screen and (max-width: $tableWidth) {
-  html {
-    font-size: 14px;
+    font-size: calcFluidFontSize(12.6002, 25.9202, 280, 576);
   }
 }
 
 body {
-  margin: 0;
-  padding: 0;
   font-family: $mainFont;
-  font-size: $mainFontSize;
-  font-weight: $mainFontWeight;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: $bgColor;
@@ -36,31 +25,11 @@ body {
 
 main {
   overflow: hidden;
+  padding: 0 rem(44);
 }
 
 .container {
   width: 100%;
   margin: 0 auto;
-  padding: 0 rem(40);
   max-width: $desktopWidth;
-
-  @media screen and (max-width: $desktopWidth) {
-    max-width: $smDesktopWidth;
-    padding: 0 30px;
-  }
-
-  @media screen and (max-width: $smDesktopWidth) {
-    max-width: $lgTableWidth;
-    padding: 0 16px;
-  }
-
-  @media screen and (max-width: $lgTableWidth) {
-    max-width: $tableWidth;
-    padding: 0 24px;
-  }
-
-  @media screen and (max-width: $tableWidth) {
-    max-width: 100%;
-    padding: 0 18px;
-  }
 }
