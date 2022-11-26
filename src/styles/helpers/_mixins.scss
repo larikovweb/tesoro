@@ -1,5 +1,11 @@
-/* Mixins:
-  ========================================================================== */
+@function calcFluidFontSize($f-min, $f-max, $v-min, $v-max) {
+  $k: calc(($f-max - $f-min) / ($v-max - $v-min));
+  $b: $f-min - $k * $v-min;
+
+  $b: $b * 1px;
+
+  @return calc(#{$k} * 100vw + #{$b});
+}
 
 // px to rem
 @function rem($pixels, $context: $mainFontSize) {
@@ -11,7 +17,7 @@
     $context: $context * 1px;
   }
 
-  @return $pixels / $context * 1rem;
+  @return calc($pixels / $context) * 1rem;
 }
 
 // size to one line
@@ -36,20 +42,5 @@
 
   :-ms-input-placeholder {
     @content;
-  }
-}
-
-@mixin font-face($font-family, $file-path, $weight: normal, $style: normal) {
-  @font-face {
-    font-family: $font-family;
-    font-weight: $weight;
-    font-style: $style;
-    font-display: swap;
-    src: url("#{$file-path}.eot?#iefix") format("embedded-opentype"),
-    url("#{$file-path}.woff") format("woff"),
-    url("#{$file-path}.woff2") format("woff2"),
-    url("#{$file-path}.svg") format("svg"),
-    url("#{$file-path}.ttf") format("ttf"),
-    url("#{$file-path}.ttf") format("truetype");
   }
 }
