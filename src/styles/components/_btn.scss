@@ -1,0 +1,29 @@
+.btn {
+  display: flex;
+  width: rem(188);
+  height: rem(70);
+  border: rem(2) solid #3c3c3c;
+  border-radius: rem(40);
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-family: "Salford Sans";
+  font-style: normal;
+  font-weight: 800;
+  font-size: rem(24);
+  line-height: 93%;
+  text-align: center;
+  letter-spacing: 0.04em;
+  color: #3c3c3c;
+  transition: box-shadow 0.3s;
+  cursor: pointer;
+  &:hover {
+    box-shadow: 0 rem(8) 0 #3c3c3c;
+  }
+  &_yellow {
+    background: #fbfe56;
+  }
+  &_primary {
+    background: #1fde91;
+  }
+}
