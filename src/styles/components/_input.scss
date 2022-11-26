@@ -9,10 +9,17 @@
   color: #3c3c3c;
   padding: 0 rem(16) rem(2);
   height: rem(60);
+  outline: none;
   &::placeholder {
     font-family: "Salford Sans";
     font-style: normal;
     color: #3c3c3c;
     opacity: 0.2;
+    transition: opacity 0.3s;
+  }
+  &:focus {
+    &::placeholder {
+      opacity: 0;
+    }
   }
 }
