@@ -1,55 +1,59 @@
-aside.cart 
+aside.cart.cart_active
     .cart__title КОРЗИНА
     img(src="./img/svg/icons/close.svg", alt="").cart__close 
     .cart__list 
-        .cart__item 
-            .cart__img
-                img(src="./img/product/product_1.png", alt="")
-            .cart__content 
-                .cart__name ВАЗОЧКА ДЛЯ СУХОЦВЕТОВ
-                .cart__count 
-                    span Количество:
-                    i.cart__minus
-                    b 2 шт
-                    i.cart__plus
-                .cart__price 150 руб.
-        .cart__item 
-            .cart__img
-                img(src="./img/product/product_1.png", alt="")
-            .cart__content 
-                .cart__name ВАЗОЧКА ДЛЯ СУХОЦВЕТОВ
-                .cart__count 
-                    span Количество:
-                    i.cart__minus
-                    b 2 шт
-                    i.cart__plus
-                .cart__price 150 руб.
-        .cart__item 
-            .cart__img
-                img(src="./img/product/product_1.png", alt="")
-            .cart__content 
-                .cart__name ВАЗОЧКА ДЛЯ СУХОЦВЕТОВ
-                .cart__count 
-                    span Количество:
-                    i.cart__minus
-                    b 2 шт
-                    i.cart__plus
-                .cart__price 150 руб.
-        .cart__item 
-            .cart__img
-                img(src="./img/product/product_1.png", alt="")
-            .cart__content 
-                .cart__name ВАЗОЧКА ДЛЯ СУХОЦВЕТОВ
-                .cart__count 
-                    span Количество:
-                    i.cart__minus
-                    b 2 шт
-                    i.cart__plus
-                .cart__price 150 руб.
+        .cart__scroll 
+            .cart__item 
+                .cart__img
+                    img(src="./img/product/product_1.png", alt="")
+                .cart__content 
+                    .cart__name ВАЗОЧКА ДЛЯ СУХОЦВЕТОВ
+                    .cart__count 
+                        span Количество:
+                        i.cart__minus
+                        b 2 шт
+                        i.cart__plus
+                    .cart__price 150 руб.
+            .cart__item 
+                .cart__img
+                    img(src="./img/product/product_1.png", alt="")
+                .cart__content 
+                    .cart__name ВАЗОЧКА ДЛЯ СУХОЦВЕТОВ
+                    .cart__count 
+                        span Количество:
+                        i.cart__minus
+                        b 2 шт
+                        i.cart__plus
+                    .cart__price 150 руб.
+            .cart__item 
+                .cart__img
+                    img(src="./img/product/product_1.png", alt="")
+                .cart__content 
+                    .cart__name ВАЗОЧКА ДЛЯ СУХОЦВЕТОВ
+                    .cart__count 
+                        span Количество:
+                        i.cart__minus
+                        b 2 шт
+                        i.cart__plus
+                    .cart__price 150 руб.
+            .cart__item 
+                .cart__img
+                    img(src="./img/product/product_1.png", alt="")
+                .cart__content 
+                    .cart__name ВАЗОЧКА ДЛЯ СУХОЦВЕТОВ
+                    .cart__count 
+                        span Количество:
+                        i.cart__minus
+                        b 2 шт
+                        i.cart__plus
+                    .cart__price 150 руб.
     .cart__totalprice ИТОГО: 2280 руб.
     form(action="").cart__form
         p *Чтобы завершить оформление заказа, оставьте свои контактные данные
         input.input(type="text", placeholder="ИМЯ")
-        input.input(type="text", palceholder="+7")
+        input.input(type="text", placeholder="+7")
         button.btn.btn_primary Заказать
+    .cart__fade
+        span 4 
+        img(src="./img/svg/cart/cart.svg", alt="")
 
