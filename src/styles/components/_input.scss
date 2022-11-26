@@ -1,0 +1,18 @@
+.input {
+  width: 100%;
+  background: #ffffff;
+  border: rem(1) solid #3c3c3c;
+  border-radius: rem(8);
+  font-weight: 800;
+  font-size: rem(24);
+  line-height: 93%;
+  color: #3c3c3c;
+  padding: 0 rem(16);
+  height: rem(60);
+  &::placeholder {
+    font-family: "Salford Sans";
+    font-style: normal;
+    color: #3c3c3c;
+    opacity: 0.2;
+  }
+}
